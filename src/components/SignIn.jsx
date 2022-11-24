@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { auth, db } from '../config/config';
-import './SignInPage.css'
-import bgImgLoginPage from '../Media/Ludivine-Malle-Dancing.jpg'
 import { Link, Navigate} from "react-router-dom";
 
 export default class LoginPage extends Component {
@@ -146,10 +144,6 @@ export default class LoginPage extends Component {
     
     render() {
         return <div className='login-page-container'>
-            <div className='login-page-imgbg-container'>
-                <img className='bgImgLoginPage' src={bgImgLoginPage} alt="Ludivine Malle performing rollers" />
-                <div className="gradient-div1 sign-in-gradient"></div>
-            </div>
             <form className='singIn-form' autoComplete='off' onSubmit={this.Signup.bind(this)}>
                 <div className="login-fild">
                     <label htmlFor="first_name">Full Name: *</label>
