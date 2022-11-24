@@ -11,7 +11,7 @@ export default class SignInPage extends Component {
             error:'',
             redirectionPath:'',
         }
-        document.title = "ContactMe"
+        document.title = "fiscook login"
     }
     
     login(e) {
@@ -20,7 +20,7 @@ export default class SignInPage extends Component {
             this.setState({
                 mail:'',
                 password:'',
-                redirectionPath:'/Boutique',
+                redirectionPath:'/',
             });
         }).catch(err => this.setState({error: err.message}));
     }

@@ -13,7 +13,7 @@ export default class LoginPage extends Component {
             error:'',
             redirectionPath:'',
         }
-        document.title = "ContactMe"
+        document.title = "fiscook Sign In"
     }
     
     Signup(e) {
@@ -31,7 +31,7 @@ export default class LoginPage extends Component {
                     confirmedPassword:'',
                     redirectionPath:'/Boutique/LoginPage',
                 });
-                this.props.navigate.push("/Boutique/LoginPage")
+                this.props.navigate.push("/Login")
             }).catch(err => this.setState({error: err.message}));
         }).catch(err => this.setState({error: err.message}));
     }
@@ -40,7 +40,6 @@ export default class LoginPage extends Component {
     
     errorMsg(theMsg, pId) {
         let p = document.querySelector(pId);
-        p.style.color = "#FFFFFF";
         p.innerText = theMsg;
         setTimeout(() => {
             p.innerText = "";
@@ -49,7 +48,6 @@ export default class LoginPage extends Component {
     
     goodAnswer(pId) {
         let p = document.querySelector(pId);
-        p.style.color = "#FFFFFF";
         p.innerText = "";
     }
     
